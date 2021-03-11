@@ -1,0 +1,123 @@
+// Polices //
+
+@font-face {    font-family: 'pokemon_solidnormal';
+  src: url('Font/home/anne/Documents/Poké Go SCSS/Font/pokemon_solid-webfont.woff2') format('woff2'),
+  url('/home/anne/Documents/Poké Go SCSS/Font/pokemon_solid-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'kiddishmedium';
+  src: url('/home/anne/Documents/Poké Go SCSS/Font/kiddish-webfont.woff2') format('woff2'),
+  url('/home/anne/Documents/Poké Go SCSS/Font/kiddish-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Variables //
+$font-stack-1:  'pokemon_solidnormal', Helvetica, sans-serif;
+$font-stack-2: 'kiddishmedium', Arial, Tahoma;
+$font-primary: 'Monserrat', Verdana, sans-serif;
+$bg-color: rgb(64, 179, 234);
+$span1: rgb(66, 117, 168);
+$span2: rgb(254, 206, 65);
+$logo: url('Image/pokemon-go-169.jpg');
+$background-pokemon: url('Image/fond_communauté.jpeg');
+$pokelightblue: rgb(64, 179, 234);
+$black: black;
+$white: white;
+$redpoke: rgb(255, 0, 0);
+
+
+// Mixin //
+
+@mixin border-title {
+  border: 4px solid $black;
+}
+
+@mixin border-title2 {
+  border: 4px solid $span2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-primary;
+  background: $span1;
+
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  width: 100vw;
+  padding: 0 10vw;
+  z-index: 1;
+  box-sizing: border-box;
+
+
+  a {
+    text-decoration: none;
+    color: $span2;
+    text-transform: uppercase;
+    font-weight: bold;
+
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+
+    .nav-links {
+      a {
+        margin: .2rem;
+        padding: 1rem .5rem;
+      }
+      a:hover {
+        background: $pokelightblue;
+        opacity: 3;
+      }
+    }
+  }
+}
+
+
+.logo {
+  width: auto;
+  height: 50px;
+  font-size: .6em;
+  margin-top: 10px;
+  margin-left: 8px;
+  margin-bottom: 20px;
+
+}
+
+.box-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  font-family: $font-stack-1;
+  margin-left: 50px;
+  margin-right: 25px;
+  @include border-title;
+  margin-bottom: 50px;
+
+h1 {
+  @include border-title2;
+}
+
+.color-title1 {
+  color: $span2;
+}
+
+.color-title3 {
+  color: $redpoke;
+}
+}
